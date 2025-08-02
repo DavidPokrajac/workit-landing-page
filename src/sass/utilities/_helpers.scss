@@ -1,0 +1,22 @@
+@use "../base/variables" as *;
+
+.text-center {
+    text-align: center;
+}
+
+.bg-purple {
+    background-color: $clr-purple-900;
+}
+
+.padding-md {
+    padding-inline: 1.25em;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.text-underline {
+    text-decoration: solid underline $clr-green 3px;
+    text-underline-offset: 6px;
+}

@@ -1,0 +1,16 @@
+@use "../base/variables" as *;
+
+.testimonial__user-photo {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    top: 3rem;
+    z-index: -1;
+}
+
+.testimonial__user-details--card-primary {
+    background-color: $clr-purple-900;
+    color: $clr-white;
+    padding-block: 2em;
+    padding-inline: 2em;
+}

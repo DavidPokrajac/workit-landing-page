@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+.feature {
+    color: $clr-purple-900;
+
+    & .feature__number {
+        display: inline-block;
+        align-content: center;
+        width: 48px;
+        height: 48px;
+        border: 1px solid $clr-purple-900;
+        border-radius: 100vw;
+    }
+}

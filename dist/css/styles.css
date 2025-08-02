@@ -57,16 +57,109 @@ h6 {
   text-wrap: balance;
 }
 
-:root {
-  --clr-green: #44ffa1;
-  --clr-purple-100: #fcf8ff;
-  --clr-purple-500: #584d62;
-  --clr-purple-900: #24053e;
-  --clr-white: #fff;
-  --text-2xl: 5rem;
-  --text-xl: 3.5rem;
-  --text-l: 2rem;
-  --text-md: 1.125rem;
+button {
+  border: none;
+}
+
+.main-intro__content__cta-button--primary,
+.testimonial__user-details__cta-button--primary {
+  background-color: #44ffa1;
+  color: #24053e;
+  padding-inline: 2em;
+  padding-block: 0.75em;
+}
+
+.header__cta-button--secondary {
+  background-color: transparent;
+  color: #fff;
+}
+
+.testimonial__user-photo {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  top: 3rem;
+  z-index: -1;
+}
+
+.testimonial__user-details--card-primary {
+  background-color: #24053e;
+  color: #fff;
+  padding-block: 2em;
+  padding-inline: 2em;
+}
+
+.feature {
+  color: #24053e;
+}
+.feature .feature__number {
+  display: inline-block;
+  align-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #24053e;
+  border-radius: 100vw;
+}
+
+.main-intro {
+  color: #fff;
+}
+.main-intro .main-intro__content {
+  padding-block-start: 3.5em;
+  padding-block-end: 9em;
+  padding-inline: 1.25em;
+  clip-path: ellipse(120% 100% at top);
+}
+.main-intro .main-intro__content .main-intro__content__title {
+  margin-block-end: 2.5em;
+}
+.main-intro .main-intro__image {
+  width: 320px;
+  height: 184px;
+  transform: translateY(-50%);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5em;
+  padding-inline: 5rem;
+  padding-block: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 2em;
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.75em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-purple {
+  background-color: #24053e;
+}
+
+.padding-md {
+  padding-inline: 1.25em;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.text-underline {
+  text-decoration: solid underline #44ffa1 3px;
+  text-underline-offset: 6px;
 }
 
 /*# sourceMappingURL=styles.css.map */

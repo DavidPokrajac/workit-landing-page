@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+:root {
+  --clr-green: #44ffa1;
+  --clr-purple-100: #fcf8ff;
+  --clr-purple-500: #584d62;
+  --clr-purple-900: #24053e;
+  --clr-white: #fff;
+  --text-2xl: 5rem;
+  --text-xl: 3.5rem;
+  --text-l: 2rem;
+  --text-md: 1.125rem;
+}
+
+.text-center {
+  text-align: center;
+}

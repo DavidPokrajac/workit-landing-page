@@ -1,0 +1,22 @@
+@use "../base/variables" as *;
+
+.main-intro {
+    color: $clr-white;
+
+    & .main-intro__content {
+        padding-block-start: 3.5em;
+        padding-block-end: 9em;
+        padding-inline: 1.25em;
+        clip-path: ellipse(120% 100% at top);
+
+        & .main-intro__content__title {
+            margin-block-end: 2.5em;
+        }
+    }
+
+    & .main-intro__image {
+        width: 320px;
+        height: 184px;
+        transform: translateY(-50%);
+    }
+}

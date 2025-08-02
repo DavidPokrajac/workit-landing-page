@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+.main-intro__content__cta-button--primary,
+.testimonial__user-details__cta-button--primary {
+    background-color: $clr-green;
+    color: $clr-purple-900;
+    padding-inline: 2em;
+    padding-block: 0.75em;
+}
+
+.header__cta-button--secondary {
+    background-color: transparent;
+    color: $clr-white;
+}
