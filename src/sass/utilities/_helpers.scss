@@ -9,7 +9,7 @@
 }
 
 .padding-md {
-    padding-inline: 1.25em;
+    /* padding-inline: 1.25em; */
 }
 
 .margin-auto {
@@ -19,4 +19,10 @@
 .text-underline {
     text-decoration: solid underline $clr-green 3px;
     text-underline-offset: 6px;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    width: 100%;
 }

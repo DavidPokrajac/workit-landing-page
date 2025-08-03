@@ -1,14 +1,99 @@
 @use "../base/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/typography" as *;
 
-.feature {
-    color: $clr-purple-900;
+.features {
+    @include respond-to("desktop") {
+        display: flex;
+        gap: 2em;
+        padding-block-start: 88px;
+        padding-block-end: 144px;
+    }
 
-    & .feature__number {
-        display: inline-block;
-        align-content: center;
-        width: 48px;
-        height: 48px;
-        border: 1px solid $clr-purple-900;
-        border-radius: 100vw;
+    @include respond-to("tablet") {
+        padding-inline: 44px;
+        padding-block-start: 56px;
+        padding-block-end: 44px;
+    }
+
+    @include respond-to("mobile") {
+        padding-inline: 20px;
+        padding-block-start: 64px;
+    }
+
+    .feature {
+        @include respond-to("desktop") {
+            @include typography($textsDesktop, "l");
+        }
+
+        @include respond-to("tablet") {
+            @include typography($textsDesktop, "l");
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 56px;
+
+            div {
+                text-align: start;
+            }
+        }
+
+        @include respond-to("mobile") {
+            @include typography($textsDesktop, "l");
+
+            display: block;
+
+            div {
+                text-align: center;
+            }
+        }
+
+        color: $clr-purple-900;
+
+        &:not(:last-of-type) {
+            margin-block-end: 2rem;
+        }
+
+        & .feature__number {
+            @include respond-to("desktop") {
+                font-size: 1.5rem;
+                width: 48px;
+            }
+
+            @include respond-to("tablet") {
+                font-size: 1.25rem;
+                padding-inline: 1.25rem;
+            }
+
+            @include respond-to("mobile") {
+                font-size: 1.25rem;
+            }
+
+            display: inline-block;
+            align-content: center;
+            aspect-ratio: 1 / 1;
+            border: 1px solid $clr-purple-900;
+            border-radius: 100vw;
+            font-family: $frauncesFamily;
+            margin-block-end: 1.5rem;
+        }
+
+        & .feature__title {
+            @include respond-to("desktop") {
+                @include typography($textsDesktop, "xl");
+            }
+
+            @include respond-to("tablet") {
+                @include typography($textsTablet, "xl");
+            }
+
+            @include respond-to("mobile") {
+                @include typography($textsMobile, "xl");
+            }
+
+            font-family: $frauncesFamily;
+            margin-block-end: 1rem;
+        }
     }
 }

@@ -1,22 +1,64 @@
 @use "../base/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/typography" as *;
 
 .main-intro {
     color: $clr-white;
 
     & .main-intro__content {
-        padding-block-start: 3.5em;
-        padding-block-end: 9em;
-        padding-inline: 1.25em;
-        clip-path: ellipse(120% 100% at top);
+        /* padding-block-start: 3.5em;
+        padding-block-end: 9em; */
+        @include respond-to("desktop") {
+            padding-block-start: 3.5em;
+            padding-block-end: 18.5em;
+        }
+
+        @include respond-to("tablet") {
+            padding-inline: 2.75em;
+            padding-block-start: 3.5em;
+            padding-block-end: 9em;
+        }
+        /* padding-inline: 1.25em; */
+        clip-path: ellipse(140% 100% at top);
 
         & .main-intro__content__title {
-            margin-block-end: 2.5em;
+            /* @include typography("3-xl"); */
+            @include respond-to("desktop") {
+                @include typography($textsDesktop, "3-xl");
+
+                max-width: 635px;
+            }
+
+            @include respond-to("tablet") {
+                @include typography($textsTablet, "3-xl");
+            }
+
+            @include respond-to("mobile") {
+                @include typography($textsMobile, "3-xl");
+            }
+
+            font-family: $frauncesFamily;
+            margin-block-end: 2.5rem;
         }
     }
 
     & .main-intro__image {
-        width: 320px;
-        height: 184px;
-        transform: translateY(-50%);
+        @include respond-to("desktop") {
+            width: 767px;
+            height: 441px;
+            transform: translateY(-50%);
+        }
+
+        @include respond-to("tablet") {
+            width: 514px;
+            height: 296px;
+            transform: translateY(-50%);
+        }
+
+        @include respond-to("mobile") {
+            width: 320px;
+            height: 184px;
+            transform: translateY(-50%);
+        }
     }
 }

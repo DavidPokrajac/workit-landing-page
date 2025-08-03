@@ -1,4 +1,20 @@
 @use "../base/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/typography" as *;
+
+button {
+    @include respond-to("desktop") {
+        @include typography($textsDesktop, "l-bold");
+    }
+
+    @include respond-to("tablet") {
+        @include typography($textsTablet, "l-bold");
+    }
+
+    @include respond-to("mobile") {
+        @include typography($textsMobile, "l-bold");
+    }
+}
 
 .main-intro__content__cta-button--primary,
 .testimonial__user-details__cta-button--primary {

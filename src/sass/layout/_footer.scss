@@ -1,8 +1,18 @@
+@use "../abstracts/mixins" as *;
+
 .footer {
+    @include respond-to("desktop") {
+        padding-block: 112px;
+    }
+
+    @include respond-to("tablet") {
+        padding-block: 80px;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3.5em;
-    padding-inline: 5rem;
-    padding-block: 5rem;
+    /* padding-inline: 5rem;
+    padding-block: 5rem; */
 }

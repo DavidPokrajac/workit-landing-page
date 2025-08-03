@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "./typography" as *;
+
+@mixin typography($texts, $key) {
+    $font-size: map.get(map.get($texts, text-sizes), $key);
+    $font-weight: map.get(map.get($texts, text-weights), $key);
+    $line-height: map.get(map.get($texts, line-heights), $key);
+
+    @if $font-size != null {
+        font-size: $font-size;
+    }
+
+    @if $font-weight != null {
+        font-weight: $font-weight;
+    }
+
+    @if $line-height != null {
+        line-height: $line-height;
+    }
+}
+
+@mixin respond-to($media) {
+    @if $media == "mobile" {
+        @media (max-width: 480px) {
+            @content;
+        }
+    } @else if $media == "tablet" {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $media == "desktop" {
+        @media (min-width: 769px) {
+            @content;
+        }
+    }
+}

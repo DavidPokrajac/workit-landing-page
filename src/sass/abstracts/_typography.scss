@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Fraunces";
+    src: url("../../../public/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf")
+        format("woff2");
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../../../public/fonts/manrope/static/Manrope-Regular.ttf")
+        format("woff2");
+}
+
+$textsDesktop: (
+    text-sizes: (
+        "3-xl": 5rem,
+        "2-xl": 3.5rem,
+        "xl": 2rem,
+        "l": 1.125rem,
+        "l-bold": 1.125rem,
+    ),
+    text-weights: (
+        "3-xl": 600,
+        "2-xl": 600,
+        "xl": 600,
+        "l": 400,
+        "l-bold": 900,
+    ),
+    line-heights: (
+        "3-xl": 1,
+        "2-xl": 1.2,
+        "xl": 1.2,
+        "l": 1.8,
+        "l-bold": 1.5,
+    ),
+);
+
+$textsTablet: (
+    text-sizes: (
+        "3-xl": 3.75rem,
+        "2-xl": 3rem,
+        "xl": 1.75rem,
+        "l": 1rem,
+        "l-bold": 1.125rem,
+    ),
+    text-weights: (
+        "3-xl": 600,
+        "2-xl": 600,
+        "xl": 600,
+        "l": 400,
+        "l-bold": 900,
+    ),
+    line-heights: (
+        "3-xl": 1,
+        "2-xl": 1.2,
+        "xl": 1.2,
+        "l": 1.8,
+        "l-bold": 1.8,
+    ),
+);
+
+$textsMobile: (
+    text-sizes: (
+        "3-xl": 3rem,
+        "2-xl": 2rem,
+        "xl": 1.5rem,
+        "l": 1rem,
+        "l-bold": 1rem,
+    ),
+    text-weights: (
+        "3-xl": 600,
+        "2-xl": 600,
+        "xl": 600,
+        "l": 400,
+        "l-bold": 900,
+    ),
+    line-heights: (
+        "3-xl": 1,
+        "2-xl": 1.2,
+        "xl": 1.2,
+        "l": 1.8,
+        "l-bold": 1.8,
+    ),
+);
