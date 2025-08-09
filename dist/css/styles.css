@@ -113,7 +113,7 @@ article .container {
 }
 @media (max-width: 991px) {
   article .container {
-    padding-block-start: 112px;
+    padding-block-start: 0;
   }
 }
 @media (max-width: 676px) {
@@ -132,7 +132,7 @@ article .container .testimonial {
 @media (max-width: 991px) {
   article .container .testimonial {
     padding-inline: 44px;
-    padding-block-start: 168px;
+    padding-block-start: 112px;
     display: flow-root;
   }
 }
@@ -147,7 +147,6 @@ article .container .testimonial {
   article .container .testimonial .testimonial__user-photo {
     width: 477px;
     height: 477px;
-    transform: translateY(-102px);
   }
 }
 @media (max-width: 991px) {
@@ -192,9 +191,6 @@ article .container .testimonial .wrapper .testimonial__user-details--card-primar
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.8;
-    /* position: absolute;
-    right: 0;
-    bottom: 0; */
     width: 730px;
     text-align: start;
     padding: 64px;
@@ -385,9 +381,6 @@ article .container .testimonial .wrapper .testimonial__user-details--card-primar
   }
 }
 .main-intro .main-intro__content {
-  /* padding-block-start: 3.5em;
-  padding-block-end: 9em; */
-  /* padding-inline: 1.25em; */
   clip-path: ellipse(140% 100% at top);
 }
 @media (min-width: 992px) {
@@ -414,7 +407,6 @@ article .container .testimonial .wrapper .testimonial__user-details--card-primar
   }
 }
 .main-intro .main-intro__content .main-intro__content__title {
-  /* @include typography("3-xl"); */
   font-family: "Fraunces", serif;
   margin-block-end: 2.5rem;
 }
@@ -467,8 +459,6 @@ article .container .testimonial .wrapper .testimonial__user-details--card-primar
   flex-direction: column;
   align-items: center;
   gap: 3.5em;
-  /* padding-inline: 5rem;
-  padding-block: 5rem; */
 }
 @media (min-width: 992px) {
   .footer {

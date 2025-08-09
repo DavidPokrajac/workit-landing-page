@@ -19,8 +19,6 @@
     background-color: $clr-purple-100;
 
     & .main-intro__content {
-        /* padding-block-start: 3.5em;
-        padding-block-end: 9em; */
         @include respond-to("desktop") {
             padding-block-start: 3.5em;
             padding-block-end: 18.5em;
@@ -42,11 +40,10 @@
             padding-block-start: 56px;
             padding-block-end: 144px;
         }
-        /* padding-inline: 1.25em; */
+
         clip-path: ellipse(140% 100% at top);
 
         & .main-intro__content__title {
-            /* @include typography("3-xl"); */
             @include respond-to("desktop") {
                 @include typography($textsDesktop, "3-xl");
 

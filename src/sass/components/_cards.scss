@@ -4,7 +4,7 @@
 
 article .container {
     @include respond-to("tablet") {
-        padding-block-start: 112px;
+        padding-block-start: 0;
     }
 
     @include respond-to("mobile") {
@@ -20,7 +20,7 @@ article .container {
 
         @include respond-to("tablet") {
             padding-inline: 44px;
-            padding-block-start: 168px;
+            padding-block-start: 112px;
             display: flow-root;
         }
 
@@ -36,7 +36,6 @@ article .container {
             @include respond-to("desktop") {
                 width: 477px;
                 height: 477px;
-                transform: translateY(-102px);
             }
 
             @include respond-to("tablet") {
@@ -72,9 +71,6 @@ article .container {
                 @include respond-to("desktop") {
                     @include typography($textsDesktop, "l");
 
-                    /* position: absolute;
-                right: 0;
-                bottom: 0; */
                     width: 730px;
                     text-align: start;
                     padding: 64px;
