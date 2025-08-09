@@ -2,98 +2,107 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/typography" as *;
 
-.features {
+.features-section {
+    background-color: $clr-purple-100;
+    clip-path: ellipse(200% 100% at top);
+
     @include respond-to("desktop") {
-        display: flex;
-        gap: 2em;
-        padding-block-start: 88px;
-        padding-block-end: 144px;
+        clip-path: ellipse(140% 100% at top);
     }
 
-    @include respond-to("tablet") {
-        padding-inline: 44px;
-        padding-block-start: 56px;
-        padding-block-end: 44px;
-    }
-
-    @include respond-to("mobile") {
-        padding-inline: 20px;
-        padding-block-start: 64px;
-    }
-
-    .feature {
+    .features {
         @include respond-to("desktop") {
-            @include typography($textsDesktop, "l");
+            display: flex;
+            gap: 2em;
+            padding-block-start: 88px;
+            padding-block-end: 144px;
         }
 
         @include respond-to("tablet") {
-            @include typography($textsDesktop, "l");
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 56px;
-
-            div {
-                text-align: start;
-            }
+            padding-inline: 44px;
+            padding-block-start: 56px;
+            padding-block-end: 44px;
         }
 
         @include respond-to("mobile") {
-            @include typography($textsDesktop, "l");
-
-            display: block;
-
-            div {
-                text-align: center;
-            }
+            padding-inline: 20px;
+            padding-block: 64px;
         }
 
-        color: $clr-purple-900;
-
-        &:not(:last-of-type) {
-            margin-block-end: 2rem;
-        }
-
-        & .feature__number {
+        .feature {
             @include respond-to("desktop") {
-                font-size: 1.5rem;
-                width: 48px;
+                @include typography($textsDesktop, "l");
             }
 
             @include respond-to("tablet") {
-                font-size: 1.25rem;
-                padding-inline: 1.25rem;
+                @include typography($textsDesktop, "l");
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 56px;
+
+                div {
+                    text-align: start;
+                }
             }
 
             @include respond-to("mobile") {
-                font-size: 1.25rem;
+                @include typography($textsDesktop, "l");
+
+                display: block;
+
+                div {
+                    text-align: center;
+                }
             }
 
-            display: inline-block;
-            align-content: center;
-            aspect-ratio: 1 / 1;
-            border: 1px solid $clr-purple-900;
-            border-radius: 100vw;
-            font-family: $frauncesFamily;
-            margin-block-end: 1.5rem;
-        }
+            color: $clr-purple-900;
 
-        & .feature__title {
-            @include respond-to("desktop") {
-                @include typography($textsDesktop, "xl");
+            &:not(:last-of-type) {
+                margin-block-end: 2rem;
             }
 
-            @include respond-to("tablet") {
-                @include typography($textsTablet, "xl");
+            & .feature__number {
+                @include respond-to("desktop") {
+                    font-size: 1.5rem;
+                    width: 48px;
+                }
+
+                @include respond-to("tablet") {
+                    font-size: 1.25rem;
+                    padding-inline: 1.25rem;
+                }
+
+                @include respond-to("mobile") {
+                    font-size: 1.25rem;
+                }
+
+                display: inline-block;
+                align-content: center;
+                aspect-ratio: 1 / 1;
+                border: 1px solid $clr-purple-900;
+                border-radius: 100vw;
+                font-family: $frauncesFamily;
+                margin-block-end: 1.5rem;
             }
 
-            @include respond-to("mobile") {
-                @include typography($textsMobile, "xl");
-            }
+            & .feature__title {
+                @include respond-to("desktop") {
+                    @include typography($textsDesktop, "xl");
+                }
 
-            font-family: $frauncesFamily;
-            margin-block-end: 1rem;
+                @include respond-to("tablet") {
+                    @include typography($textsTablet, "xl");
+                }
+
+                @include respond-to("mobile") {
+                    @include typography($textsMobile, "xl");
+                }
+
+                font-family: $frauncesFamily;
+                margin-block-end: 1rem;
+            }
         }
     }
 }

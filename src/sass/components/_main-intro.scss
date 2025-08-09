@@ -3,7 +3,20 @@
 @use "../abstracts/typography" as *;
 
 .main-intro {
+    @include respond-to("desktop") {
+        height: 826px;
+    }
+
+    @include respond-to("tablet") {
+        height: 610px;
+    }
+
+    @include respond-to("mobile") {
+        height: 480px;
+    }
+
     color: $clr-white;
+    background-color: $clr-purple-100;
 
     & .main-intro__content {
         /* padding-block-start: 3.5em;
@@ -11,12 +24,23 @@
         @include respond-to("desktop") {
             padding-block-start: 3.5em;
             padding-block-end: 18.5em;
+
+            background-image: url("../../../public/images/bg-pattern-1.svg"),
+                url("../../../public/images/bg-pattern-2.svg");
+            background-repeat: no-repeat, no-repeat;
+            background-position: top 30px left -100px, top 50% right -50px;
         }
 
         @include respond-to("tablet") {
             padding-inline: 2.75em;
             padding-block-start: 3.5em;
             padding-block-end: 9em;
+        }
+
+        @include respond-to("mobile") {
+            padding-inline: 20px;
+            padding-block-start: 56px;
+            padding-block-end: 144px;
         }
         /* padding-inline: 1.25em; */
         clip-path: ellipse(140% 100% at top);
@@ -52,7 +76,7 @@
         @include respond-to("tablet") {
             width: 514px;
             height: 296px;
-            transform: translateY(-50%);
+            transform: translateY(-35%);
         }
 
         @include respond-to("mobile") {

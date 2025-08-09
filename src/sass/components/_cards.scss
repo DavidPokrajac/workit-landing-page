@@ -2,9 +2,13 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/typography" as *;
 
-.container {
+article .container {
     @include respond-to("tablet") {
         padding-block-start: 112px;
+    }
+
+    @include respond-to("mobile") {
+        padding-block-start: 0px;
     }
 
     position: relative;
@@ -22,8 +26,11 @@
 
         @include respond-to("mobile") {
             padding-inline: 20px;
+            padding-block-start: 112px;
             position: relative;
         }
+
+        display: flex;
 
         .testimonial__user-photo {
             @include respond-to("desktop") {
@@ -51,54 +58,65 @@
             }
         }
 
-        .testimonial__user-details--card-primary {
+        .wrapper {
             @include respond-to("desktop") {
-                @include typography($textsDesktop, "l");
-
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 730px;
-                text-align: start;
-                padding: 64px;
-            }
-
-            @include respond-to("tablet") {
-                @include typography($textsTablet, "l");
-
-                width: 504px;
-                float: right;
+                position: relative;
+                right: 90px;
             }
 
             @include respond-to("mobile") {
-                @include typography($textsMobile, "l");
-
-                width: 100%;
+                padding-block-start: 0px;
             }
 
-            background-color: $clr-purple-900;
-            color: $clr-white;
-            padding-block: 2em;
-            padding-inline: 2em;
-
-            & > * + * {
-                margin-block-start: 2rem;
-            }
-
-            & h2 {
+            .testimonial__user-details--card-primary {
                 @include respond-to("desktop") {
-                    @include typography($textsDesktop, "2-xl");
+                    @include typography($textsDesktop, "l");
+
+                    /* position: absolute;
+                right: 0;
+                bottom: 0; */
+                    width: 730px;
+                    text-align: start;
+                    padding: 64px;
                 }
 
                 @include respond-to("tablet") {
-                    @include typography($textsTablet, "2-xl");
+                    @include typography($textsTablet, "l");
+
+                    width: 504px;
+                    float: right;
                 }
 
                 @include respond-to("mobile") {
-                    @include typography($textsMobile, "2-xl");
+                    @include typography($textsMobile, "l");
+
+                    width: 100%;
                 }
 
-                font-family: $frauncesFamily;
+                background-color: $clr-purple-900;
+                color: $clr-white;
+                padding-block: 2em;
+                padding-inline: 2em;
+
+                & > * + * {
+                    margin-block-start: 2rem;
+                }
+
+                & h2 {
+                    @include respond-to("desktop") {
+                        @include typography($textsDesktop, "2-xl");
+                    }
+
+                    @include respond-to("tablet") {
+                        @include typography($textsTablet, "2-xl");
+                    }
+
+                    @include respond-to("mobile") {
+                        @include typography($textsMobile, "2-xl");
+                    }
+
+                    font-family: $frauncesFamily;
+                }
             }
         }
     }
