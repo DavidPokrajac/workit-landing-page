@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Fraunces";
-    src: url("../../../public/fonts/fraunces/static/Fraunces_144pt-SemiBold.woff2")
+    src: url("/public/fonts/fraunces/static/Fraunces_144pt-SemiBold.woff2")
         format("woff2");
 }
 @font-face {
     font-family: "Manrope";
-    src: url("../../../public/fonts/manrope/static/Manrope-Regular.woff2")
+    src: url("/public/fonts/manrope/static/Manrope-Regular.woff2")
         format("woff2");
 }
 body {
