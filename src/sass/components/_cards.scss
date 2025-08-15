@@ -74,6 +74,9 @@ article .container {
                     width: 730px;
                     text-align: start;
                     padding: 64px;
+                    background-image: url("../../../public/images/bg-pattern-3.svg");
+                    background-repeat: no-repeat;
+                    background-position: top 120% right 15%;
                 }
 
                 @include respond-to("tablet") {

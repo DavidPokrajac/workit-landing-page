@@ -78,7 +78,7 @@ button {
 @media (min-width: 992px) {
     button {
         font-size: 1.125rem;
-        font-weight: 900;
+        font-weight: 700;
         line-height: 1.5;
     }
 }
@@ -204,6 +204,9 @@ article
         width: 730px;
         text-align: start;
         padding: 64px;
+        background-image: url("../../public/images/bg-pattern-3.svg");
+        background-repeat: no-repeat;
+        background-position: top 120% right 15%;
     }
 }
 @media (max-width: 991px) {
@@ -431,8 +434,8 @@ article
     .main-intro .main-intro__content {
         padding-block-start: 3.5em;
         padding-block-end: 18.5em;
-        background-image: url("../../../public/images/bg-pattern-1.svg"),
-            url("../../../public/images/bg-pattern-2.svg");
+        background-image: url("../../public/images/bg-pattern-1.svg"),
+            url("../../public/images/bg-pattern-2.svg");
         background-repeat: no-repeat, no-repeat;
         background-position: top 30px left -100px, top 50% right -50px;
     }

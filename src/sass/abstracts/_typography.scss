@@ -1,14 +1,12 @@
 @font-face {
     font-family: "Fraunces";
-    src: local("Fraunces")
-        url("../../../public/fonts/fraunces/Fraunces-VariableFont_wght.woff2")
+    src: url("../../../public/fonts/fraunces/Fraunces-VariableFont_wght.woff2")
         format("woff2");
 }
 
 @font-face {
     font-family: "Manrope";
-    src: local("Manrope")
-        url("../../../public/fonts/manrope/Manrope-VariableFont_wght.woff2")
+    src: url("../../../public/fonts/manrope/Manrope-VariableFont_wght.woff2")
         format("woff2");
 }
 
@@ -25,7 +23,7 @@ $textsDesktop: (
         "2-xl": 600,
         "xl": 600,
         "l": 400,
-        "l-bold": 900,
+        "l-bold": 700,
     ),
     line-heights: (
         "3-xl": 1,
